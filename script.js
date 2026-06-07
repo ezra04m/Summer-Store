@@ -30,3 +30,8 @@ document.getElementById("checkoutForm").addEventListener("submit", function(e) {
   alert("Order submitted! You can now contact the customer and ship the item.");
 });
 Cart = ["shirt", "shoes", "hat"]
+let cart = [];
+function addToCart(product) {
+  cart.push(product);
+  updateCartDisplay();
+}
