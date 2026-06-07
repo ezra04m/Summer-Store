@@ -29,3 +29,4 @@ document.getElementById("checkoutForm").addEventListener("submit", function(e) {
   e.preventDefault();
   alert("Order submitted! You can now contact the customer and ship the item.");
 });
+Cart = ["shirt", "shoes", "hat"]
