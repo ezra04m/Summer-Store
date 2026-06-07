@@ -1,7 +1,7 @@
 const products = [
   {
     name: "Vintage Hoodie",
-    price: "$40",
+    price: "$35",
     image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop"
   },
   {
