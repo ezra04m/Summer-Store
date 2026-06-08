@@ -85,3 +85,9 @@ document.getElementById("checkoutForm").addEventListener("submit", function(e) {
     "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
 });
 displayProducts();
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.shiftKey && e.key === "A") {
+    document.getElementById("adminBtn").style.display = "block";
+    alert("Admin Panel Unlocked");
+  }
+});
