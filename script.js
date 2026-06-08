@@ -73,21 +73,9 @@ document.getElementById("checkoutForm").addEventListener("submit", function(e) {
     return;
   }
 
-  alert("Order placed successfully!");
+  // optional: store cart in browser before redirect
+  localStorage.setItem("cart", JSON.stringify(cart));
 
-  console.log("ORDER:");
-  console.log(cart);
-
-  cart = [];
-  updateCart();
+  // send to Stripe
+  window.location.href = "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
 });
-
-displayProducts();
-document
-  .getElementById("checkoutForm")
-  .addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    window.location.href =
-      "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
-  });
