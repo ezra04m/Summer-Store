@@ -84,3 +84,4 @@ document.getElementById("checkoutForm").addEventListener("submit", function(e) {
   window.location.href =
     "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
 });
+displayProducts();
