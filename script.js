@@ -14,19 +14,20 @@ window.addEventListener("DOMContentLoaded", () => {
   totalDisplay = document.getElementById("total");
 
   displayProducts();
-updateCart();
+  updateCart();
+
   document.getElementById("checkoutForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (cart.length === 0) {
-    alert("Your cart is empty");
-    return;
-  }
+    if (cart.length === 0) {
+      alert("Your cart is empty");
+      return;
+    }
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
 
-  window.location.href =
-    "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
+    window.location.href =
+      "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
   });
 });
 
