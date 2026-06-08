@@ -6,9 +6,15 @@ const products = [
 
 let cart = [];
 
-const productsContainer = document.getElementById("products");
-const cartItemsContainer = document.getElementById("cartItems");
-const totalDisplay = document.getElementById("total");
+let productsContainer, cartItemsContainer, totalDisplay;
+
+window.addEventListener("DOMContentLoaded", () => {
+  productsContainer = document.getElementById("products");
+  cartItemsContainer = document.getElementById("cartItems");
+  totalDisplay = document.getElementById("total");
+
+  displayProducts();
+});
 
 // DISPLAY PRODUCTS
 function displayProducts() {
