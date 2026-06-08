@@ -27,6 +27,7 @@ updateCart();
 
   window.location.href =
     "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
+  });
 });
 
 // DISPLAY PRODUCTS
@@ -85,8 +86,6 @@ function updateCart() {
   totalDisplay.textContent = total;
 }
 
-// CHECKOUT
-});
 document.addEventListener("keydown", (e) => {
   if (e.ctrlKey && e.shiftKey && e.key === "A") {
     document.getElementById("adminBtn").style.display = "block";
