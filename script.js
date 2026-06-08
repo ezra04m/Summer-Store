@@ -68,14 +68,13 @@ function updateCart() {
 document.getElementById("checkoutForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  if (cart.length === 0) {
+  if (!cart || cart.length === 0) {
     alert("Your cart is empty");
     return;
   }
 
-  // optional: store cart in browser before redirect
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  // send to Stripe
-  window.location.href = "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
+  window.location.href =
+    "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
 });
