@@ -4,7 +4,7 @@ const products = [
   { id: 3, name: "Sunglasses", price: 20 }
 ];
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let productsContainer, cartItemsContainer, totalDisplay;
 
@@ -14,6 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
   totalDisplay = document.getElementById("total");
 
   displayProducts();
+updateCart();
 });
 
 // DISPLAY PRODUCTS
@@ -38,13 +39,16 @@ function displayProducts() {
 function addToCart(id) {
   const product = products.find(p => p.id === id);
   cart.push(product);
+localStorage.setItem("cart", JSON.stringify(cart));
+updateCart();
   updateCart();
 }
 
 // REMOVE ITEM
 function removeFromCart(index) {
   cart.splice(index, 1);
-  updateCart();
+localStorage.setItem("cart", JSON.stringify(cart));
+updateCart();
 }
 
 // UPDATE CART UI
@@ -84,7 +88,6 @@ document.getElementById("checkoutForm").addEventListener("submit", function(e) {
   window.location.href =
     "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
 });
-displayProducts();
 document.addEventListener("keydown", (e) => {
   if (e.ctrlKey && e.shiftKey && e.key === "A") {
     document.getElementById("adminBtn").style.display = "block";
