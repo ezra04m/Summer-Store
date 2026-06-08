@@ -83,3 +83,11 @@ document.getElementById("checkoutForm").addEventListener("submit", function(e) {
 });
 
 displayProducts();
+document
+  .getElementById("checkoutForm")
+  .addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    window.location.href =
+      "https://buy.stripe.com/3cIfZh8FSbMK63fd7ce7m00";
+  });
