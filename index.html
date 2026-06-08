@@ -40,7 +40,15 @@
     </section>
 
   </main>
-
+<button id="adminBtn" style="display:none;">
+  Admin Panel
+</button>
   <script src="script.js"></script>
 </body>
 </html>
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.shiftKey && e.key === "A") {
+    document.getElementById("adminBtn").style.display = "block";
+    alert("Admin Panel Unlocked");
+  }
+});
